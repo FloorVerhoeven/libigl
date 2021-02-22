@@ -80,7 +80,25 @@ public:
     Eigen::Matrix<unsigned char,Eigen::Dynamic,Eigen::Dynamic>& G,
     Eigen::Matrix<unsigned char,Eigen::Dynamic,Eigen::Dynamic>& B,
     Eigen::Matrix<unsigned char,Eigen::Dynamic,Eigen::Dynamic>& A);
-  IGL_INLINE void draw_labels(
+  IGL_INLINE void draw_two_buffers(
+            ViewerData& data,
+            ViewerData& data2,
+            bool update_matrices,
+            Eigen::Matrix<unsigned char,Eigen::Dynamic,Eigen::Dynamic>& R,
+            Eigen::Matrix<unsigned char,Eigen::Dynamic,Eigen::Dynamic>& G,
+            Eigen::Matrix<unsigned char,Eigen::Dynamic,Eigen::Dynamic>& B,
+            Eigen::Matrix<unsigned char,Eigen::Dynamic,Eigen::Dynamic>& A);
+  IGL_INLINE void draw_three_buffers(
+            ViewerData& data,
+            ViewerData& data2,
+            ViewerData& data3,
+            bool update_matrices,
+            Eigen::Matrix<unsigned char,Eigen::Dynamic,Eigen::Dynamic>& R,
+            Eigen::Matrix<unsigned char,Eigen::Dynamic,Eigen::Dynamic>& G,
+            Eigen::Matrix<unsigned char,Eigen::Dynamic,Eigen::Dynamic>& B,
+            Eigen::Matrix<unsigned char,Eigen::Dynamic,Eigen::Dynamic>& A);
+
+    IGL_INLINE void draw_labels(
     ViewerData& data,
     const igl::opengl::MeshGL::TextGL& labels
   );
